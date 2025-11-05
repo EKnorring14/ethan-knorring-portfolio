@@ -1,6 +1,3 @@
-// ═══════════════════════════════════════════════════════════
-// FILE 1: app/page.tsx
-// ═══════════════════════════════════════════════════════════
 
 import { Metadata } from 'next';
 import Portfolio from '../components/Portfolio';
