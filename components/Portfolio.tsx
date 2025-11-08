@@ -421,9 +421,6 @@ export default function Portfolio() {
                 <span>📍 Worcester, MA</span>
               </div>
               <div className="hidden sm:block">•</div>
-              <div className="flex items-center gap-2">
-                <span>📞 (508) 768-7318</span>
-              </div>
             </div>
             <p className="text-sm text-slate-500 mt-6">Expected Graduation: May 2026</p>
           </div>
