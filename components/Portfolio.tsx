@@ -197,7 +197,7 @@ export default function Portfolio() {
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">Software Engineering Intern</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">Intern</h3>
                     <p className="text-red-600 font-semibold text-lg mb-2">Global Partners</p>
                     <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                       <span>📍 Dedham, MA</span>
