@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Briefcase, GraduationCap, ArrowRight, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Briefcase, GraduationCap } from 'lucide-react';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('about');
@@ -40,7 +40,7 @@ export default function Portfolio() {
                 </button>
               ))}
               <a
-                href="mailto:eknorring@wpi.edu"
+                href="mailto:ethan.knorring@gmail.com"
                 className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors"
               >
                 Get in Touch
@@ -59,15 +59,15 @@ export default function Portfolio() {
                 Available for Opportunities
               </div>
               <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Full-Stack Developer & CS Student
+                Full-Stack Developer & CS Graduate
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 I build accessible, high-performance web applications with modern technologies. 
-                Currently pursuing Computer Science at WPI with hands-on experience in Next.js, TypeScript, and full-stack development.
+                I'm a Computer Science graduate from WPI with hands-on experience in full-stack development, accessibility engineering, and IT operations.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="mailto:eknorring@wpi.edu"
+                  href="mailto:ethan.knorring@gmail.com"
                   className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2"
                 >
                   <Mail size={18} />
@@ -89,20 +89,20 @@ export default function Portfolio() {
               <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
                 <GraduationCap className="mb-4" size={32} />
                 <div className="text-3xl font-bold mb-2">May 2026</div>
-                <div className="text-red-100">Expected Graduation</div>
+                <div className="text-red-100">Graduated</div>
                 <div className="text-sm text-red-200 mt-1">Worcester Polytechnic Institute</div>
               </div>
               <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
                 <Code className="mb-4" size={32} />
-                <div className="text-3xl font-bold mb-2">8+</div>
+                <div className="text-3xl font-bold mb-2">9</div>
                 <div className="text-red-100">Languages</div>
-                <div className="text-sm text-red-200 mt-1">TypeScript, Java, Python & More</div>
+                <div className="text-sm text-red-200 mt-1">TypeScript, Java, Python, SQL and more</div>
               </div>
               <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
                 <Briefcase className="mb-4" size={32} />
                 <div className="text-3xl font-bold mb-2">2</div>
-                <div className="text-red-100">Internships</div>
-                <div className="text-sm text-red-200 mt-1">Domestic & International</div>
+                <div className="text-red-100">Professional Roles</div>
+                <div className="text-sm text-red-200 mt-1">IT + International Web Development</div>
               </div>
               <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
                 <div className="flex items-center gap-3 mb-4">
@@ -141,7 +141,7 @@ export default function Portfolio() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-6">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {['TypeScript', 'JavaScript', 'Java', 'C/C++', 'Python', 'R', 'SQL', 'HTML/CSS'].map((skill) => (
+                {['TypeScript', 'JavaScript', 'Java', 'C/C++', 'Python', 'R', 'SQL', 'HTML/CSS', 'SCSS'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
                     {skill}
                   </span>
@@ -169,7 +169,7 @@ export default function Portfolio() {
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-6">Concepts</h3>
               <div className="flex flex-wrap gap-2">
-                {['Algorithms', 'Data Structures', 'OOP', 'REST APIs', 'WCAG', 'Agile'].map((skill) => (
+                {['Full-Stack Web Development', 'Database Design', 'Security & Vulnerability Analysis', 'REST APIs', 'Constraint Satisfaction', 'Agile', 'WCAG Accessibility', 'Source Control Management'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
                     {skill}
                   </span>
@@ -197,27 +197,39 @@ export default function Portfolio() {
               <div className="bg-slate-50 p-8 rounded-2xl">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">Intern</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">IT Intern</h3>
                     <p className="text-red-600 font-semibold text-lg mb-2">Global Partners</p>
                     <div className="flex flex-wrap gap-3 text-sm text-slate-600">
-                      <span>📍 Dedham, MA</span>
+                      <span>📍 Waltham, MA</span>
                       <span>•</span>
-                      <span>📅 June 2024 – August 2025</span>
+                      <span>📅 Summers 2023–2024; Part-time 2025</span>
                     </div>
                   </div>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Designed <strong>PropFuel Insights</strong>, a full-stack market simulator with Next.js/TypeScript frontend and FastAPI backend supporting proprietary fuel brand rollout strategy</p>
+                    <p className="text-slate-700">Designed and built <strong>PropFuel Insights</strong>, a full-stack internal market simulator (Next.js/TypeScript + FastAPI) supporting proprietary fuel brand rollout strategy; presented to senior leadership in Agile sprints</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Built AI-powered sentiment analysis system with interactive Recharts dashboards for location-based competitive analysis</p>
+                    <p className="text-slate-700">Built an AI-powered sentiment analysis engine with interactive Recharts dashboards for location-based competitive intelligence, enabling data-driven decisions across regional markets</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Automated system provisioning via Windows Batch scripting and Active Directory; presented to senior leadership in Agile sprints</p>
+                    <p className="text-slate-700">Administered and automated Active Directory and Windows systems via Batch scripting, including user provisioning, group policies, and endpoint security configuration</p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-slate-700">Handled security triage including identity verification for password resets, email/domain whitelisting, and threat-level assessment for incoming incidents</p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-slate-700">Provided Tier 1/2 helpdesk support for hardware, software, and network issues while documenting repeatable fixes in an internal knowledge base</p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-slate-700">Maintained audit trails, enforced access policies, and supported onboarding/offboarding workflows as part of IT security and compliance operations</p>
                   </li>
                 </ul>
               </div>
@@ -250,15 +262,15 @@ export default function Portfolio() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Co-led 7-week international nonprofit web development project using Next.js, TypeScript, and Headless WordPress via GraphQL</p>
+                    <p className="text-slate-700">Co-led a 7-week international nonprofit web project using Next.js, TypeScript, SCSS, and Headless WordPress via GraphQL with clearly defined content contracts</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Achieved <strong>WCAG 2.1 AAA compliance</strong> with adjustable fonts, dyslexia mode, text-to-speech, and focus tools</p>
+                    <p className="text-slate-700">Achieved <strong>WCAG 2.1 AAA compliance</strong>, the highest accessibility standard, with dyslexia mode, text-to-speech, adjustable fonts, and advanced focus tools</p>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-slate-700">Engineered scalable architecture with reusable components and optimized SEO/performance for accessibility and search visibility</p>
+                    <p className="text-slate-700">Engineered reusable component architecture, improved SEO structure, added unit testing, and optimized load speed for users with assistive technologies</p>
                   </li>
                 </ul>
               </div>
@@ -285,7 +297,7 @@ export default function Portfolio() {
                   <Code className="text-red-600" size={24} />
                 </div>
                 <a
-                  href="https://student-solver-tool.vercel.app"
+                  href="https://sts.cs.wpi.edu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-red-600 transition-colors"
@@ -294,16 +306,17 @@ export default function Portfolio() {
                 </a>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
-                Academic Assignment Optimizer
+                Academic Assignment Optimizer & Validator
               </h3>
               <p className="text-sm text-red-600 font-medium mb-3">Algorithm & UI Lead</p>
               <p className="text-slate-600 mb-6">
-                Assignment system used by WPI to automate TA/PLA/GLA assignments using backtracking search and constraint satisfaction with guided debugging and interactive UI.
+                Officially deployed at WPI as the standard TA/PLA/GLA assignment platform, serving 100+ active users and reducing a weeks-long manual process to instant results.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Algorithms</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Constraint Satisfaction</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Database Design</span>
+                <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">SQL</span>
               </div>
             </div>
 
@@ -327,11 +340,12 @@ export default function Portfolio() {
               </h3>
               <p className="text-sm text-red-600 font-medium mb-3">International Nonprofit Project</p>
               <p className="text-slate-600 mb-6">
-                WCAG 2.1 AAA compliant nonprofit website with Next.js, TypeScript, and Headless WordPress featuring advanced accessibility tools including dyslexia mode and text-to-speech.
+                WCAG 2.1 AAA compliant nonprofit site built with Next.js, TypeScript, SCSS, and Headless WordPress, including dyslexia mode, text-to-speech, and advanced focus tooling.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Next.js</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">GraphQL</span>
+                <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">SCSS</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">WCAG AAA</span>
               </div>
             </div>
@@ -344,11 +358,11 @@ export default function Portfolio() {
                 </div>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
-                Security & Automation Tools
+                Security Research & Automation Tools
               </h3>
               <p className="text-sm text-red-600 font-medium mb-3">Educational Security Suite</p>
               <p className="text-slate-600 mb-6">
-                Educational keylogger demonstrating input capture techniques, password analyzer evaluating entropy and vulnerabilities, and web scraper for automated data extraction.
+                Educational security research suite featuring a Java keylogger for low-level input capture, a password entropy analyzer for vulnerability evaluation, and a BeautifulSoup scraper with configurable parsing pipelines.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Java</span>
@@ -370,12 +384,13 @@ export default function Portfolio() {
               </h3>
               <p className="text-sm text-red-600 font-medium mb-3">Interactive Web Application</p>
               <p className="text-slate-600 mb-6">
-                Interactive browser-based trivia game using vanilla JavaScript with real-time validation and roster challenge mode featuring historical Red Sox data.
+                Built in vanilla JavaScript with real-time validation, dynamic question loading, and a roster challenge mode focused on historical Red Sox lineups.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">JavaScript</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">Game Development</span>
                 <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">DOM Manipulation</span>
+                <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-medium">State Management</span>
               </div>
             </div>
           </div>
@@ -393,7 +408,7 @@ export default function Portfolio() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="mailto:eknorring@wpi.edu"
+              href="mailto:ethan.knorring@gmail.com"
               className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2"
             >
               <Mail size={20} />
@@ -414,15 +429,18 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-slate-400">
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>eknorring@wpi.edu</span>
+                <span>ethan.knorring@gmail.com</span>
               </div>
               <div className="hidden sm:block">•</div>
               <div className="flex items-center gap-2">
                 <span>📍 Worcester, MA</span>
               </div>
               <div className="hidden sm:block">•</div>
+              <div className="flex items-center gap-2">
+                <span>(508) 768-7318</span>
+              </div>
             </div>
-            <p className="text-sm text-slate-500 mt-6">Expected Graduation: May 2026</p>
+            <p className="text-sm text-slate-500 mt-6">Graduated: May 2026</p>
           </div>
         </div>
       </section>
@@ -435,7 +453,7 @@ export default function Portfolio() {
               <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">EK</span>
               </div>
-              <span className="text-slate-400 text-sm">© 2025 Ethan Knorring</span>
+              <span className="text-slate-400 text-sm">© {new Date().getFullYear()} Ethan Knorring</span>
             </div>
             <div className="flex items-center gap-6">
               <a
@@ -455,7 +473,7 @@ export default function Portfolio() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:eknorring@wpi.edu"
+                href="mailto:ethan.knorring@gmail.com"
                 className="text-slate-400 hover:text-white transition-colors"
               >
                 <Mail size={20} />
