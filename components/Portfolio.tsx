@@ -12,16 +12,18 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen text-zinc-900 grain relative overflow-x-clip">
+      <div className="pointer-events-none absolute -left-32 top-16 h-72 w-72 rounded-full bg-rose-200/50 blur-3xl" />
+      <div className="pointer-events-none absolute -right-28 top-[28rem] h-80 w-80 rounded-full bg-sky-200/50 blur-3xl" />
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <nav className="fixed top-4 left-0 right-0 z-50 px-4">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 rounded-2xl border border-zinc-900/10 bg-[#fffdf7]/90 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+          <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center -rotate-3">
                 <span className="text-white font-bold text-lg">EK</span>
               </div>
-              <div className="text-xl font-semibold text-slate-900">
+              <div className="text-xl font-semibold text-zinc-900">
                 Ethan Knorring
               </div>
             </div>
@@ -32,8 +34,8 @@ export default function Portfolio() {
                   onClick={() => scrollToSection(section.toLowerCase())}
                   className={`text-sm font-medium transition-colors ${
                     activeSection === section.toLowerCase()
-                      ? 'text-red-600'
-                      : 'text-slate-600 hover:text-slate-900'
+                      ? 'text-rose-700'
+                      : 'text-zinc-600 hover:text-zinc-900'
                   }`}
                 >
                   {section}
@@ -41,7 +43,7 @@ export default function Portfolio() {
               ))}
               <a
                 href="mailto:ethan.knorring@gmail.com"
-                className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors"
+                className="px-5 py-2 bg-zinc-900 hover:bg-zinc-700 text-white text-sm font-medium rounded-lg transition-colors"
               >
                 Get in Touch
               </a>
@@ -51,24 +53,24 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="about" className="pt-32 pb-24 px-6 lg:px-8 bg-white">
+      <section id="about" className="pt-36 pb-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-red-50 text-red-700 rounded-full text-sm font-medium mb-6">
+              <div className="inline-block px-4 py-2 bg-rose-100 text-rose-800 rounded-full text-sm font-medium mb-6 border border-rose-200">
                 Available for Opportunities
               </div>
-              <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+              <h1 className="text-5xl sm:text-6xl font-bold text-zinc-900 mb-6 leading-tight">
                 Full-Stack Developer & CS Graduate
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              <p className="text-xl text-zinc-700 mb-8 leading-relaxed max-w-xl">
                 I build accessible, high-performance web applications with modern technologies. 
                 I'm a Computer Science graduate from WPI with hands-on experience in full-stack development, accessibility engineering, and IT operations.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="mailto:ethan.knorring@gmail.com"
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2"
+                  className="px-6 py-3 bg-zinc-900 hover:bg-zinc-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2"
                 >
                   <Mail size={18} />
                   Contact Me
@@ -77,7 +79,7 @@ export default function Portfolio() {
                   href="https://github.com/EKnorring14"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2"
+                  className="px-6 py-3 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-900/20 font-medium rounded-lg transition-colors inline-flex items-center gap-2"
                 >
                   <Github size={18} />
                   View GitHub
@@ -85,36 +87,38 @@ export default function Portfolio() {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
-                <GraduationCap className="mb-4" size={32} />
-                <div className="text-3xl font-bold mb-2">May 2026</div>
-                <div className="text-red-100">Graduated</div>
-                <div className="text-sm text-red-200 mt-1">Worcester Polytechnic Institute</div>
-              </div>
-              <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
-                <Code className="mb-4" size={32} />
-                <div className="text-3xl font-bold mb-2">9</div>
-                <div className="text-red-100">Languages</div>
-                <div className="text-sm text-red-200 mt-1">TypeScript, Java, Python, SQL and more</div>
-              </div>
-              <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
-                <Briefcase className="mb-4" size={32} />
-                <div className="text-3xl font-bold mb-2">2</div>
-                <div className="text-red-100">Professional Roles</div>
-                <div className="text-sm text-red-200 mt-1">IT + International Web Development</div>
-              </div>
-              <div className="bg-gradient-to-br from-red-600 to-red-700 p-8 rounded-2xl text-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <Github size={28} />
-                  <Linkedin size={28} />
+            <div className="lg:pl-10 border-l border-zinc-300 space-y-6">
+              <div className="flex items-start gap-4 pb-5 border-b border-zinc-300/80">
+                <GraduationCap className="mt-1 text-rose-700" size={24} />
+                <div>
+                  <div className="text-2xl font-bold text-zinc-900">May 2026</div>
+                  <div className="text-zinc-700">Graduated, Worcester Polytechnic Institute</div>
                 </div>
-                <div className="text-sm text-red-100 mb-3">Connect with me</div>
-                <div className="flex flex-col gap-2">
-                  <a href="https://github.com/EKnorring14" target="_blank" rel="noopener noreferrer" className="text-sm text-red-200 hover:text-white transition-colors">
+              </div>
+              <div className="flex items-start gap-4 pb-5 border-b border-zinc-300/80">
+                <Code className="mt-1 text-sky-700" size={24} />
+                <div>
+                  <div className="text-2xl font-bold text-zinc-900">9 Languages</div>
+                  <div className="text-zinc-700">TypeScript, Java, Python, SQL and more</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 pb-5 border-b border-zinc-300/80">
+                <Briefcase className="mt-1 text-amber-700" size={24} />
+                <div>
+                  <div className="text-2xl font-bold text-zinc-900">2 Professional Roles</div>
+                  <div className="text-zinc-700">IT + international web development</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="mt-1 flex gap-2 text-zinc-700">
+                  <Github size={22} />
+                  <Linkedin size={22} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <a href="https://github.com/EKnorring14" target="_blank" rel="noopener noreferrer" className="text-zinc-700 hover:text-zinc-900 transition-colors">
                     GitHub →
                   </a>
-                  <a href="https://www.linkedin.com/in/ethan-knorring-327a9224b/" target="_blank" rel="noopener noreferrer" className="text-sm text-red-200 hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/in/ethan-knorring-327a9224b/" target="_blank" rel="noopener noreferrer" className="text-zinc-700 hover:text-zinc-900 transition-colors">
                     LinkedIn →
                   </a>
                 </div>
@@ -125,21 +129,21 @@ export default function Portfolio() {
       </section>
 
       {/* Technical Skills */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-50">
+      <section className="py-24 px-6 lg:px-8 bg-[#f0ece3]/70 border-y border-zinc-900/10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Technical Expertise</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-zinc-900 mb-4">Technical Expertise</h2>
+            <p className="text-lg text-zinc-700 max-w-2xl mx-auto">
               Proficient in modern web technologies and frameworks with a focus on performance and accessibility
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                <Code className="text-red-600" size={24} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-zinc-300">
+            <div className="md:pr-8">
+              <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-6 border border-rose-200">
+                <Code className="text-rose-700" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-6">Languages</h3>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-6">Languages</h3>
               <div className="flex flex-wrap gap-2">
                 {['TypeScript', 'JavaScript', 'Java', 'C/C++', 'Python', 'R', 'SQL', 'HTML/CSS', 'SCSS'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
@@ -149,11 +153,11 @@ export default function Portfolio() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                <Briefcase className="text-red-600" size={24} />
+            <div className="md:px-8">
+              <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6 border border-sky-200">
+                <Briefcase className="text-sky-700" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-6">Frameworks & Tools</h3>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-6">Frameworks & Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {['Next.js', 'React', 'FastAPI', 'GraphQL', 'Apollo Client', 'Git', 'BeautifulSoup'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
@@ -163,11 +167,11 @@ export default function Portfolio() {
               </div>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                <GraduationCap className="text-red-600" size={24} />
+            <div className="md:pl-8">
+              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6 border border-amber-200">
+                <GraduationCap className="text-amber-700" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-6">Concepts</h3>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-6">Concepts</h3>
               <div className="flex flex-wrap gap-2">
                 {['Full-Stack Web Development', 'Database Design', 'Security & Vulnerability Analysis', 'REST APIs', 'Constraint Satisfaction', 'Agile', 'WCAG Accessibility', 'Source Control Management'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
@@ -181,24 +185,24 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 lg:px-8 bg-white">
+      <section id="experience" className="py-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Professional Experience</h2>
-            <p className="text-lg text-slate-600">
+            <h2 className="text-4xl font-bold text-zinc-900 mb-4">Professional Experience</h2>
+            <p className="text-lg text-zinc-700">
               Building real-world solutions with cutting-edge technologies
             </p>
           </div>
           
           <div className="space-y-12">
             {/* Global Partners */}
-            <div className="relative pl-8 border-l-2 border-red-600">
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-red-600 rounded-full"></div>
-              <div className="bg-slate-50 p-8 rounded-2xl">
+            <div className="relative pl-8 border-l-2 border-zinc-900/40">
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-zinc-900 rounded-full"></div>
+              <div className="pb-10 border-b border-zinc-300">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">IT Intern</h3>
-                    <p className="text-red-600 font-semibold text-lg mb-2">Global Partners</p>
+                    <p className="text-rose-700 font-semibold text-lg mb-2">Global Partners</p>
                     <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                       <span>📍 Waltham, MA</span>
                       <span>•</span>
@@ -236,13 +240,13 @@ export default function Portfolio() {
             </div>
 
             {/* Accessible Limitless Living */}
-            <div className="relative pl-8 border-l-2 border-red-600">
-              <div className="absolute -left-2 top-0 w-4 h-4 bg-red-600 rounded-full"></div>
-              <div className="bg-slate-50 p-8 rounded-2xl">
+            <div className="relative pl-8 border-l-2 border-zinc-900/40">
+              <div className="absolute -left-2 top-0 w-4 h-4 bg-zinc-900 rounded-full"></div>
+              <div className="pb-2">
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">Website Developer</h3>
-                    <p className="text-red-600 font-semibold text-lg mb-2">Accessible Limitless Living</p>
+                    <p className="text-rose-700 font-semibold text-lg mb-2">Accessible Limitless Living</p>
                     <div className="flex flex-wrap gap-3 text-sm text-slate-600 items-center">
                       <span>📍 Thessaloniki, Greece</span>
                       <span>•</span>
@@ -252,7 +256,7 @@ export default function Portfolio() {
                         href="https://all.org.gr" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-red-600 hover:text-red-700 inline-flex items-center gap-1 font-medium"
+                        className="text-rose-700 hover:text-rose-800 inline-flex items-center gap-1 font-medium"
                       >
                         View Site <ExternalLink size={14} />
                       </a>
@@ -280,35 +284,35 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6 lg:px-8 bg-slate-50">
+      <section id="projects" className="py-24 px-6 lg:px-8 bg-[#f0ece3]/70 border-y border-zinc-900/10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-zinc-900 mb-4">Featured Projects</h2>
+            <p className="text-lg text-zinc-700 max-w-2xl mx-auto">
               Practical applications showcasing technical skills and problem-solving abilities
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-10">
             {/* Academic Assignment Optimizer */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-red-300 transition-all group">
+            <div className="group border-t border-zinc-300 pt-8">
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                  <Code className="text-red-600" size={24} />
+                <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center border border-rose-200">
+                  <Code className="text-rose-700" size={24} />
                 </div>
                 <a
                   href="https://sts.cs.wpi.edu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-red-600 transition-colors"
+                  className="text-zinc-400 hover:text-rose-700 transition-colors"
                 >
                   <ExternalLink size={20} />
                 </a>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+              <h3 className="text-xl font-bold text-zinc-900 mb-2 group-hover:text-rose-700 transition-colors">
                 Academic Assignment Optimizer & Validator
               </h3>
-              <p className="text-sm text-red-600 font-medium mb-3">Algorithm & UI Lead</p>
+              <p className="text-sm text-rose-700 font-medium mb-3">Algorithm & UI Lead</p>
               <p className="text-slate-600 mb-6">
                 Officially deployed at WPI as the standard TA/PLA/GLA assignment platform, serving 100+ active users and reducing a weeks-long manual process to instant results.
               </p>
@@ -321,24 +325,24 @@ export default function Portfolio() {
             </div>
 
             {/* All.org.gr Project */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-red-300 transition-all group">
+            <div className="group border-t border-zinc-300 pt-8">
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                  <GraduationCap className="text-red-600" size={24} />
+                <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center border border-sky-200">
+                  <GraduationCap className="text-sky-700" size={24} />
                 </div>
                 <a
                   href="https://all.org.gr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-red-600 transition-colors"
+                  className="text-zinc-400 hover:text-sky-700 transition-colors"
                 >
                   <ExternalLink size={20} />
                 </a>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+              <h3 className="text-xl font-bold text-zinc-900 mb-2 group-hover:text-sky-700 transition-colors">
                 Accessible Limitless Living Website
               </h3>
-              <p className="text-sm text-red-600 font-medium mb-3">International Nonprofit Project</p>
+              <p className="text-sm text-sky-700 font-medium mb-3">International Nonprofit Project</p>
               <p className="text-slate-600 mb-6">
                 WCAG 2.1 AAA compliant nonprofit site built with Next.js, TypeScript, SCSS, and Headless WordPress, including dyslexia mode, text-to-speech, and advanced focus tooling.
               </p>
@@ -351,16 +355,16 @@ export default function Portfolio() {
             </div>
 
             {/* Security Tools */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-red-300 transition-all group">
+            <div className="group border-t border-zinc-300 pt-8">
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                  <Briefcase className="text-red-600" size={24} />
+                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center border border-amber-200">
+                  <Briefcase className="text-amber-700" size={24} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+              <h3 className="text-xl font-bold text-zinc-900 mb-2 group-hover:text-amber-700 transition-colors">
                 Security Research & Automation Tools
               </h3>
-              <p className="text-sm text-red-600 font-medium mb-3">Educational Security Suite</p>
+              <p className="text-sm text-amber-700 font-medium mb-3">Educational Security Suite</p>
               <p className="text-slate-600 mb-6">
                 Educational security research suite featuring a Java keylogger for low-level input capture, a password entropy analyzer for vulnerability evaluation, and a BeautifulSoup scraper with configurable parsing pipelines.
               </p>
@@ -373,16 +377,16 @@ export default function Portfolio() {
             </div>
 
             {/* Red Sox Trivia */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-red-300 transition-all group">
+            <div className="group border-t border-zinc-300 pt-8">
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                  <Code className="text-red-600" size={24} />
+                <div className="w-12 h-12 bg-zinc-200 rounded-xl flex items-center justify-center border border-zinc-300">
+                  <Code className="text-zinc-700" size={24} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition-colors">
+              <h3 className="text-xl font-bold text-zinc-900 mb-2 group-hover:text-zinc-700 transition-colors">
                 Red Sox Archive Trivia Game
               </h3>
-              <p className="text-sm text-red-600 font-medium mb-3">Interactive Web Application</p>
+              <p className="text-sm text-zinc-700 font-medium mb-3">Interactive Web Application</p>
               <p className="text-slate-600 mb-6">
                 Built in vanilla JavaScript with real-time validation, dynamic question loading, and a roster challenge mode focused on historical Red Sox lineups.
               </p>
@@ -398,7 +402,8 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <section id="contact" className="py-24 px-6 lg:px-8 bg-zinc-900 text-white relative overflow-hidden">
+        <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-rose-500/20 blur-3xl" />
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
           <p className="text-xl text-slate-300 mb-12 leading-relaxed max-w-2xl mx-auto">
@@ -409,7 +414,7 @@ export default function Portfolio() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="mailto:ethan.knorring@gmail.com"
-              className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-rose-700 hover:bg-rose-800 text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2"
             >
               <Mail size={20} />
               Send Me an Email
@@ -418,7 +423,7 @@ export default function Portfolio() {
               href="https://github.com/EKnorring14"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-white hover:bg-zinc-100 text-zinc-900 font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2"
             >
               <Github size={20} />
               View My Work
@@ -446,7 +451,7 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-slate-900 border-t border-slate-800">
+      <footer className="py-8 px-6 bg-zinc-950 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-3">
